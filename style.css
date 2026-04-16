@@ -1,0 +1,155 @@
+.logo {
+color: #00ff88;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.acoes-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-header {
+    text-decoration: none;
+    color: #00ff88;
+    border: 1px solid #00ff88;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-header:hover {
+    background-color: #00ff88;
+    color: black;
+}
+
+.body {
+    margin: 0;
+    display: grid;
+    grid-template-areas: 
+        "cabeca cabeca"
+        "braco corpo"
+        "pe pe";
+
+    grid-template-rows: 220px auto 220px;
+    grid-template-columns: 1fr 4fr;
+}
+
+.cabeca {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    grid-area: cabeca;
+    background-color: rgb(0, 0, 0);
+    color: #00ff88;
+}
+
+.corpo {
+    grid-area: corpo;
+    background-color: rgba(10, 10, 10, 0.89);
+    color: rgba(15, 175, 23, 0.911);;
+}
+
+.braco {
+    grid-area: braco;
+    background-color: rgba(15, 175, 23, 0.911);
+}
+
+.pe {
+    grid-area: pe;
+    background-color: rgb(0, 0, 0);
+    color: rgba(15, 175, 23, 0.911);
+}
+
+@media only screen and (max-width: 850px) {
+        body{
+            display: grid;
+            grid-template-areas: 
+                "cabeca"
+                "braco"
+                "corpo"
+                "pe";
+        grid-template-rows: 250px 100px auto 270px;
+        grid-template-columns: auto;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+        body{
+            display: grid;
+            grid-template-areas: 
+                "cabeca"
+                "braco"
+                "corpo"
+                "pe";
+        grid-template-rows: 300px 0px auto 290px;
+        grid-template-columns: auto;
+        
+        
+    }
+
+    aside{
+        display: none;
+    }
+}
+
+.mae {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    height: 400px;
+    width: 300px;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(15, 15, 15, 0.911);
+    border: none;
+    box-shadow: 0 4px 8px rgba(15, 175, 23, 0.911);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    color: green;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(32, 55, 56, 0.911);
+}
+
+.linkp {
+    text-decoration: none;
+    color: inherit;
+    display: contents;
+}
+
+.cardimg {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cardh1 {
+    font-size: large;
+}
+
+.cardp {
+    font-size: medium;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #222; 
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
